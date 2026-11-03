@@ -1,8 +1,6 @@
 # DesenvolvimentoSistemas
 # 🚀 Tecnologias de Desenvolvimento
 
-Neste curso, vamos aprender a desenvolver aplicações utilizando duas tecnologias importantes: **Dart e Flutter**.
-
 ## 💙 1. Dart
 
 Dart é uma linguagem de programação desenvolvida pelo Google. É uma linguagem moderna, multiplataforma e de fácil aprendizagem, utilizada principalmente no desenvolvimento de aplicações.
@@ -46,9 +44,3 @@ Durante nossos estudos, vamos aprender a trabalhar com:
 📚 **Materiais oficiais para estudo:**
 
 🔗 [Documentação e recursos de aprendizagem do Flutter](https://docs.flutter.dev/reference/learning-resources)
-
-## 🎯 Nosso objetivo
-
-Ao longo das aulas, vamos transformar conhecimentos teóricos em aplicações práticas, desenvolvendo habilidades de programação, raciocínio lógico, criatividade e resolução de problemas.
-
-**Lembre-se: todo grande desenvolvedor começou aprendendo o básico. Pratique, pesquise, erre, corrija e continue evoluindo!** 💻🚀
