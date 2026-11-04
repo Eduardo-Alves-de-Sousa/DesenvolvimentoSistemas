@@ -1,5 +1,5 @@
+import 'package:cadastro/telas/tela_login.dart';
 import 'package:flutter/material.dart';
-import 'package:projeto/telas/tela_login.dart';
 
 class TelaBoasVindas extends StatelessWidget{
   const TelaBoasVindas({super.key});

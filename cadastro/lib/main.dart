@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'telas/tela_boas_vindas.dart';
+import 'telas/tela_login.dart';
 
 void main(){
   runApp(const MeuAplicativo());
@@ -13,7 +14,7 @@ class MeuAplicativo extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Meu Aplicativo',
-      home: const TelaBoasVindas(),
+      home: const TelaLogin(),
     );
   }
 }
