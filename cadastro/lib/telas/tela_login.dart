@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/compo_texto.dart';
+
 class TelaLogin extends StatelessWidget {
   const TelaLogin({super.key});
 
@@ -44,11 +46,14 @@ class TelaLogin extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24,),
-
             // Campo para digitar o EMAIL DO USUARIO
-            
-            const SizedBox(height: 16,),
+            const CampoTexto(
+              titulo: 'E-mail',
+              dica: 'Digite seu e-mail',
+              icone: Icons.email,
+            ),
 
+            const SizedBox(height: 16,),
             //campo para digitar a SENHA DO USUARIO
           ],
         ),
