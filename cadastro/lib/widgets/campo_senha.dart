@@ -37,8 +37,13 @@ bool mostrarSenha = false;
         },
       ),
 
+      filled: true,
+      fillColor: Colors.white,
+
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
      ),
     );
   }
-
 }
