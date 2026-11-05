@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CampoSenha extends StatefulWidgets{
+class CampoSenha extends StatefulWidget{
   const CampoSenha({super.key});
 
   @override
   State<CampoSenha> createState() => _CampoSenhaState();
+}
+
+class StatefulWidgets {
 }
 //CLASSE responsavel por controlar
 // todas as mudanças do campo de senha
