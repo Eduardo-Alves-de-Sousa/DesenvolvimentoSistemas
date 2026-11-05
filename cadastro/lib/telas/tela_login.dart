@@ -57,6 +57,32 @@ class TelaLogin extends StatelessWidget {
             const SizedBox(height: 16,),
             //campo para digitar a SENHA DO USUARIO
             const CampoSenha(),
+
+            const SizedBox(height: 20,),
+
+            //botão para entrar no app
+            SizedBox(
+              width: double.infinity,
+              height: 45,
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TelaPrincipal(),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.login),
+                label: const Text(
+                  'Entrar',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
