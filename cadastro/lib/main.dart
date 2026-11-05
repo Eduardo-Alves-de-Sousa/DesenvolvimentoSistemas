@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'telas/tela_boas_vindas.dart';
+//import 'telas/tela_boas_vindas.dart';
 import 'telas/tela_login.dart';
 
 void main(){

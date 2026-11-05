@@ -43,9 +43,13 @@ class TelaLogin extends StatelessWidget {
                 color: Colors.blue,
               ),
             ),
+            const SizedBox(height: 24,),
+
+            // Campo para digitar o EMAIL DO USUARIO
+            
             const SizedBox(height: 16,),
 
-            
+            //campo para digitar a SENHA DO USUARIO
           ],
         ),
       ),
