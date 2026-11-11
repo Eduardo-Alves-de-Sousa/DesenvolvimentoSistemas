@@ -1,3 +1,4 @@
+import 'package:cadastro/telas/tela_principal.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/compo_texto.dart';
