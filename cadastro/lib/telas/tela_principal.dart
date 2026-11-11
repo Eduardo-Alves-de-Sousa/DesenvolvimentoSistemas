@@ -54,11 +54,34 @@ class TelaPrincipal extends StatelessWidget{
               child:Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children:[
+                  Icon(
+                    Icons.waving_hand,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  SizedBox(height: 16,),
 
+                  Text(
+                    'Olá, Seja bem-vindo(a)!',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  SizedBox(height: 8,),
+                 
+                  Text(
+                    'É muito bom ter você aqui.'
+                    'Explore as funcionalidades do aplicativo e aproveite ao máximo a experiência.',
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
                 ],
               ),
             ),
-        
           ],
         ),
       ),

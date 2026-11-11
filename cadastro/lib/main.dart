@@ -1,7 +1,7 @@
 import 'package:cadastro/telas/tela_principal.dart';
 import 'package:flutter/material.dart';
 //import 'telas/tela_boas_vindas.dart';
-import 'telas/tela_login.dart';
+//import 'telas/tela_login.dart';
 
 void main(){
   runApp(const MeuAplicativo());
