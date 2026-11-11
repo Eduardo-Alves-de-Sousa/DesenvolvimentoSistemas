@@ -31,9 +31,36 @@ class TelaPrincipal extends StatelessWidget{
                 context, 
                 (route) => route.isFirst);
             },
-            
           ),
         ],
+      ),
+      //conteudo principal da tela.
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(24),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xFF2196F3),
+                    Color(0xFF0D47A1)
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:[
+
+                ],
+              ),
+            ),
+        
+          ],
+        ),
       ),
     );
   }
