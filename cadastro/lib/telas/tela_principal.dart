@@ -38,6 +38,7 @@ class TelaPrincipal extends StatelessWidget{
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               width: double.infinity,
@@ -82,9 +83,68 @@ class TelaPrincipal extends StatelessWidget{
                 ],
               ),
             ),
+
+            const SizedBox(height: 30,),
+
+            const Text(
+              'O que deseja fazer?',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+            SizedBox(height: 16,),
+
+            Row(
+              children: [
+                // Expanded faz o elemento ocupar o espaço disponível na tela.
+                Expanded(
+                  //_criarOpcao é uma função personalizada
+                  child: _criarOpcao(
+                    icone: Icons.person,
+                    titulo: 'Meu Perfil',
+                    cor: Colors.blue,
+                    aoClicar: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'Em breve você poderá acessar seu perfil!',
+                          ),
+                        ),
+                      );
+                    }
+                  ),
+                ),
+                const SizedBox(width: 16,),
+                // Expanded faz o elemento ocupar o espaço disponível na tela.
+                Expanded(
+                  //_criarOpcao é uma função personalizada
+                  child: _criarOpcao(
+                    icone: Icons.settings,
+                    titulo: 'Configurações',
+                    cor: Colors.deepPurple,
+                    aoClicar: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text(
+                            'Em breve você poderá acessar suas configurações!',
+                          ),
+                        ),
+                      );
+                    }
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
+  //Método que cria os cartões de opções na tela principal.
+  Widget _criarOpcao({
+
+  });
 }
+  
