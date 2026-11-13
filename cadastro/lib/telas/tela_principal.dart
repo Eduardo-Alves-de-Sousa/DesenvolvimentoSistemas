@@ -137,14 +137,114 @@ class TelaPrincipal extends StatelessWidget{
                 ),
               ],
             ),
+            const SizedBox(height: 16,),
+
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(20),
+
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(18),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.blue.withValues(alpha: 0.08),
+                    blurRadius: 12,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
+                
+              ),
+              child: const Row(
+                children:[
+                  Icon(
+                    Icons.info_outline,
+                    color: Colors.blue,
+                    size: 32,
+                  ),
+                  SizedBox(width: 14,),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Tudo pronto para começar!',
+                          style: TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 6,),
+
+                        Text(
+                          'Sua área principal está pronta'
+                          'para receber novas funcionalidades!',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.black54,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
   //Método que cria os cartões de opções na tela principal.
+  // 
   Widget _criarOpcao({
+    required IconData icone,
+    required String titulo,
+    required Color cor,
+    required VoidCallback aoClicar,
+  }) {
+    return InkWell(
+      onTap: aoClicar,
+      borderRadius: BorderRadius.circular(18),
 
-  });
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          vertical: 24,
+          horizontal: 12,
+        ),
+
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(18),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.5),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          children: [
+            Icon(
+              icone,
+              color: cor,
+              size: 40,
+            ),
+
+            const SizedBox(height: 12,),
+
+            Text(
+              titulo,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
-  
