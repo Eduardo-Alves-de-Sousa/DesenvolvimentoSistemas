@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class TelaPrincipal extends StatelessWidget{
+class TelaPrincipal extends StatelessWidget {
   const TelaPrincipal({super.key});
 
   @override
@@ -16,9 +16,7 @@ class TelaPrincipal extends StatelessWidget{
 
         title: const Text(
           'Página Principal',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-          ),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         //Botão para sair da tela.
         actions: [
@@ -27,9 +25,7 @@ class TelaPrincipal extends StatelessWidget{
             tooltip: 'Sair',
             onPressed: () {
               // Ação ao clicar no botão de sair
-              Navigator.popUntil(
-                context, 
-                (route) => route.isFirst);
+              Navigator.popUntil(context, (route) => route.isFirst);
             },
           ),
         ],
@@ -45,22 +41,15 @@ class TelaPrincipal extends StatelessWidget{
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFF2196F3),
-                    Color(0xFF0D47A1)
-                  ],
+                  colors: [Color(0xFF2196F3), Color(0xFF0D47A1)],
                 ),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child:Column(
+              child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:[
-                  Icon(
-                    Icons.waving_hand,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                  SizedBox(height: 16,),
+                children: [
+                  Icon(Icons.waving_hand, color: Colors.white, size: 40),
+                  SizedBox(height: 16),
 
                   Text(
                     'Olá, Seja bem-vindo(a)!',
@@ -70,21 +59,18 @@ class TelaPrincipal extends StatelessWidget{
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 8,),
-                 
+                  SizedBox(height: 8),
+
                   Text(
                     'É muito bom ter você aqui.'
                     'Explore as funcionalidades do aplicativo e aproveite ao máximo a experiência.',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                 ],
               ),
             ),
 
-            const SizedBox(height: 30,),
+            const SizedBox(height: 30),
 
             const Text(
               'O que deseja fazer?',
@@ -94,7 +80,7 @@ class TelaPrincipal extends StatelessWidget{
                 color: Colors.blue,
               ),
             ),
-            SizedBox(height: 16,),
+            SizedBox(height: 16),
 
             Row(
               children: [
@@ -113,10 +99,10 @@ class TelaPrincipal extends StatelessWidget{
                           ),
                         ),
                       );
-                    }
+                    },
                   ),
                 ),
-                const SizedBox(width: 16,),
+                const SizedBox(width: 16),
                 // Expanded faz o elemento ocupar o espaço disponível na tela.
                 Expanded(
                   //_criarOpcao é uma função personalizada
@@ -132,12 +118,12 @@ class TelaPrincipal extends StatelessWidget{
                           ),
                         ),
                       );
-                    }
+                    },
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 16,),
+            const SizedBox(height: 16),
 
             Container(
               width: double.infinity,
@@ -153,16 +139,11 @@ class TelaPrincipal extends StatelessWidget{
                     offset: const Offset(0, 4),
                   ),
                 ],
-                
               ),
               child: const Row(
-                children:[
-                  Icon(
-                    Icons.info_outline,
-                    color: Colors.blue,
-                    size: 32,
-                  ),
-                  SizedBox(width: 14,),
+                children: [
+                  Icon(Icons.info_outline, color: Colors.blue, size: 32),
+                  SizedBox(width: 14),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -174,15 +155,12 @@ class TelaPrincipal extends StatelessWidget{
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 6,),
+                        SizedBox(height: 6),
 
                         Text(
                           'Sua área principal está pronta'
                           'para receber novas funcionalidades!',
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black54,
-                          ),
+                          style: TextStyle(fontSize: 14, color: Colors.black54),
                         ),
                       ],
                     ),
@@ -190,13 +168,57 @@ class TelaPrincipal extends StatelessWidget{
                 ],
               ),
             ),
+            SizedBox(height: 30),
+            GridView.count(
+              crossAxisCount: 2,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              children: [
+                Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [Icon(Icons.person, size: 40), Text('Perfil')],
+                  ),
+                ),
+
+                Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [Icon(Icons.book, size: 40), Text('Cursos')],
+                  ),
+                ),
+
+                Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.assignment, size: 40),
+                      Text('Atividades'),
+                    ],
+                  ),
+                ),
+
+                Card(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.settings, size: 40),
+                      Text('Configurações'),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
     );
   }
+
   //Método que cria os cartões de opções na tela principal.
-  // 
+  //
   Widget _criarOpcao({
     required IconData icone,
     required String titulo,
@@ -208,10 +230,7 @@ class TelaPrincipal extends StatelessWidget{
       borderRadius: BorderRadius.circular(18),
 
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 24,
-          horizontal: 12,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 12),
 
         decoration: BoxDecoration(
           color: Colors.white,
@@ -226,21 +245,14 @@ class TelaPrincipal extends StatelessWidget{
         ),
         child: Column(
           children: [
-            Icon(
-              icone,
-              color: cor,
-              size: 40,
-            ),
+            Icon(icone, color: cor, size: 40),
 
-            const SizedBox(height: 12,),
+            const SizedBox(height: 12),
 
             Text(
               titulo,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ],
         ),
