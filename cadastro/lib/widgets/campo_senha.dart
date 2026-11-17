@@ -1,49 +1,87 @@
+// Importa os componentes visuais do Flutter
 import 'package:flutter/material.dart';
 
-class CampoSenha extends StatefulWidget{
+// Cria o widget CampoSenha
+// StatefulWidget permite que a interface tenha mudanças de estado
+class CampoSenha extends StatefulWidget {
+
+  // Construtor da classe
   const CampoSenha({super.key});
 
+  // Cria e associa a classe responsável por controlar os estados
   @override
   State<CampoSenha> createState() => _CampoSenhaState();
 }
 
-class StatefulWidgets {
-}
-//CLASSE responsavel por controlar
-// todas as mudanças do campo de senha
+// Classe responsável por controlar as mudanças do campo de senha
 class _CampoSenhaState extends State<CampoSenha> {
-bool mostrarSenha = false;
 
+  // Variável que controla se a senha está visível ou oculta
+  // false = senha oculta
+  // true = senha visível
+  bool mostrarSenha = false;
+
+  // Método responsável por construir a interface
   @override
   Widget build(BuildContext context) {
+
+    // Cria o campo de texto
     return TextField(
-     obscureText: !mostrarSenha,
 
-     decoration: InputDecoration(
-      labelText: 'Senha',
-      hintText: 'Digite sua senha',
-      prefixIcon: const Icon(Icons.lock),
+      // Controla a visibilidade da senha
+      // ! inverte o valor da variável
+      // false = senha visível
+      // true = senha oculta
+      obscureText: !mostrarSenha,
 
-      suffixIcon:IconButton( 
-        icon: Icon(
-          mostrarSenha
-          ? Icons.visibility
-          : Icons.visibility_off,
+      // Configura a aparência do campo
+      decoration: InputDecoration(
+
+        // Título do campo
+        labelText: 'Senha',
+
+        // Dica para o usuário
+        hintText: 'Digite sua senha',
+
+        // Ícone de cadeado no início do campo
+        prefixIcon: const Icon(Icons.lock),
+
+        // Botão para mostrar ou ocultar a senha
+        suffixIcon: IconButton(
+
+          // Altera o ícone conforme o estado da senha
+          icon: Icon(
+            mostrarSenha
+                ? Icons.visibility
+                : Icons.visibility_off,
+          ),
+
+          // Executa uma ação quando o usuário clica no ícone
+          onPressed: () {
+
+            // Atualiza o estado do widget
+            setState(() {
+
+              // Inverte o valor da variável
+              mostrarSenha = !mostrarSenha;
+
+            });
+          },
         ),
-        onPressed: (){
-          setState(() {
-            mostrarSenha = !mostrarSenha;
-          });
-        },
-      ),
 
-      filled: true,
-      fillColor: Colors.white,
+        // Ativa o preenchimento do campo
+        filled: true,
 
-      border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        // Define a cor de fundo
+        fillColor: Colors.white,
+
+        // Configura a borda
+        border: OutlineInputBorder(
+
+          // Arredonda os cantos
+          borderRadius: BorderRadius.circular(10),
+        ),
       ),
-     ),
     );
   }
 }
